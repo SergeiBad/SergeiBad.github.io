@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -58,7 +59,7 @@
 
   		    <div class="main-content">
   		    	<div class="row">
-  		    		<div class="col-lg-6 col-md-12 col-sm-12">
+  		    		<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
   		    			<div class="main-title">
   		    				<h1>автоматизированная <br>штукатурка стен</h1>
   		    				<p class="main-subtitle">Идеально ровные стены <br> в кратчайшие сроки</p>
@@ -89,7 +90,97 @@
   		    </div>  
   	    </div>
   	</main>
-  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <section class="features">
+  	<div class="container">
+  		<h2 class="section-header">
+  			Преимущества работы с нами 
+  		</h2>
+  		<div class="features-slider">
+  		 <div class="features-block">
+  		 	<div class="features-img">
+  		 		<picture>
+  		 			<source srcset="img/money.svg" type="image/">
+  		 			<img src="img/money.png" alt="Платите по факту">
+  		 		</picture>
+  		 	</div>
+  		 	<h3>Платите по факту</h3>
+  		 	<p>Вы оплачиваете работы только после их выполнения. <br>Никаких скрытых доплат и промежуточных платежей.</p>
+  		 </div>
+  		 <div class="features-block">
+  		 	<div class="features-img">
+  		 		<picture>
+  		 			<source srcset="img/open-folder-with-document.svg" type="image/">
+  		 			<img src="img/open-folder-with-document.png" alt="Заключаем договор">
+  		 		</picture>
+  		 	</div>
+  		 	<h3>Заключаем договор</h3>
+  		 	<p>Перед началом работ заключаем договор на юридическое лицо. <br>Вы можете быть уверены, что все обязательства будут выполнены.</p>
+  		 </div>
+  		 <div class="features-block">
+  		 	<div class="features-img">
+  		 		<picture>
+  		 			<source srcset="img/clock-circular-outline.svg" type="image/">
+  		 			<img src="img/clock-circular-outline.png" alt="Точно в срок">
+  		 		</picture>
+  		 	</div>
+  		 	<h3>Точно в срок</h3>
+  		 	<p>Работаем строго по установленным срокам, которые прописаны в договоре. Если не успеваем, Вы платите меньше</p>
+  		 </div>
+  		 <div class="features-block">
+  		 	<div class="features-img">
+  		 		<picture>
+  		 			<source srcset="img/piggy-bank.svg" type="image/">
+  		 			<img src="img/piggy-bank.png" alt="Экономьте на материалах">
+  		 		</picture>
+  		 	</div>
+  		 	<h3>Экономьте на материалах</h3>
+  		 	<p>Мы являемся структурным подразделением компании поставщикастроительных смесей gicema.ru и даём Вам самые выгодные цены.</p>
+  		 </div>
+
+  		</div>
+  	</div>
+  </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- Подключаем slick slider -->
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <!-- Подключаем библиотеку slick slider -->
+    <script src="slick/slick.min.js"></script>
+    <!-- Инициализируем слайдер -->
+    <script>
+    	$(document).ready(function(){
+          $('.features-slider').slick({
+          	 arrows:true,
+             infinite: true,
+             slidesToShow: 4,
+             slidesToScroll: 1,
+             responsive: [
+                 {
+                   breakpoint: 991,
+                   settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 2,
+                     prevArrow: '<button class="prev arrow"></button>',
+                     nextArrow: '<button class="next arrow"></button>'
+                   }
+                 },
+                 {
+                   breakpoint: 767,
+                   settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1,
+                     prevArrow: '<button class="prev arrow"></button>',
+                     nextArrow: '<button class="next arrow"></button>'
+                   }
+                }
+              ]
+          });
+        });
+    </script>
   </body>
+
 </html>
